@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(msg) {
+        document.write(msg);
+        pulaLinha();
+    }
+
+    num = parseInt(Math.random() * 10);
+    console.log(num);
+
+    chances = 1;
+    while (chances <= 3) {
+        var tentativa = parseInt(prompt("Digite um número de 1 a 10"));
+        if (tentativa == num) {
+            mostra("Parabéns, você ACERTOU!! O número era: " + num);
+            chances = 4;
+        } else {
+            mostra("Você Errou!");
+        }
+        chances++;
+    }
+    mostra("FIM");
+</script>

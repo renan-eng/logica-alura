@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+    function mostra(msg) {
+        document.write(msg)
+        pulaLinha();
+    }
+    while( isNaN(vitorias) ){
+         var vitorias = parseInt(prompt("Digite o número de vitórias do seu time: "));
+    }
+    while( isNaN(empates) ){
+         var empates = parseInt(prompt("Digite o número de empates do seu time: "));
+    }
+    
+    var pontuacao = vitorias * 3 + empates;
+
+    potosAnoPassado = 28;
+    mostra("Potuação do seu time: " + pontuacao);
+
+    if(pontuacao > potosAnoPassado) {
+        mostra("Seu time está melhor que ano passado.");
+    } else if (pontuacao < potosAnoPassado) {
+        mostra("Seu time está pior que ano passado.");
+    } else {
+        mostra("Seu time está igual ao ano passado.");
+    }    
+</script>

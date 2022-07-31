@@ -1,0 +1,28 @@
+<meta charset="UTF-8" />
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function ehPar(num) {
+        if (num % 2 === 0) return true;
+    }
+
+    function mostraTodosPares(num) {
+        let i = 0; //contador
+        while (i <= num) {
+            ehPar(i) ? mostra(i) : "";
+            i++;
+        }
+        mostra("FIM");
+    }
+
+    var num = 100;
+    mostraTodosPares(num);
+</script>

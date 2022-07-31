@@ -1,0 +1,26 @@
+<meta charset="UTF-8" />
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function mostraTodosExceto1e2(contador, num, exceto1, exceto2) {
+        let i = contador;
+        while (i <= num) {
+            (i == exceto1) | (i == exceto2) ? i++ : (mostra(i), i++);
+        }
+        mostra("FIM");
+    }
+
+    var num = 40;
+    var contador = 30;
+    var exceto1 = 33;
+    var exceto2 = 37;
+    mostraTodosExceto1e2(contador, num, exceto1, exceto2);
+</script>

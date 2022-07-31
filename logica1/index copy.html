@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    function mostra(msg) {
+        document.write(msg)
+        pulaLinha();
+    }
+    var anoDescobrimento = 1500;
+    var anoHoje = 2022;
+
+    mostra("Número de gerações " + Math.round((anoHoje - anoDescobrimento)/28));
+</script>

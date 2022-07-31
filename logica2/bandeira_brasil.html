@@ -1,0 +1,45 @@
+<canvas width="600" height="420"></canvas>
+<script>
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+    var comprimento = parseInt(tela.width);
+    var altura = parseInt(tela.height);
+    console.log(comprimento + "x" + altura);
+
+    /* Explicação variáveis:
+     * Bandeira Original = 20mx14m
+     * logo para manter a proporção para um Comprimento de 600px precisamos de 420px de Altura
+     * A váriavel proporcao representa a distância igual entre as pontas do Losango
+     * A proporcao real seria 1,7m, logo 1,7m / 20m = 0,085
+     * O raio do circulo original é de 3,5m -> 3,5m / 20m = 0,175
+     */
+    var verde = "#009c3b";
+    var amarelo = "#ffdf00";
+    var azul = "#002776";
+    var proporcao = comprimento * 0.085;
+    var raioCirculo = comprimento * 0.175;
+
+    //retangulo
+    pincel.fillStyle = verde;
+    pincel.fillRect(0, 0, comprimento, altura);
+
+    //triangulo 1
+    pincel.fillStyle = amarelo;
+    pincel.moveTo(comprimento / 2, proporcao);
+    pincel.lineTo(proporcao, altura / 2);
+    pincel.lineTo(comprimento - proporcao, altura / 2);
+    pincel.fill();
+
+    //triangulo 2
+    pincel.fillStyle = amarelo;
+    pincel.moveTo(comprimento / 2, altura - proporcao);
+    pincel.lineTo(proporcao, altura / 2);
+    pincel.lineTo(comprimento - proporcao, altura / 2);
+    pincel.fill();
+
+    //circulo -> pincel.arc(coord x, coord y, raio, angulo inicial(0), angulo final (2*Math.PI()))
+    pincel.fillStyle = azul;
+    pincel.beginPath();
+    pincel.arc(comprimento / 2, altura / 2, raioCirculo, 0, 2 * Math.PI);
+    pincel.fill();
+</script>
