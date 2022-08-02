@@ -13,7 +13,25 @@
         pincel.fill();
     }
 
+    var raio = 20;
+    var incrementa = 1;
+
+    function atualizaTela() {
+        if (raio > 30) {
+            incrementa = -1;
+        } else if (raio < 20) {
+            incrementa = 1;
+        }
+        raio = raio + incrementa;
+        limpaTela();
+        desenhaCirculo(300, 150, raio, 'blue');
+    }
+
     function limpaTela() {
         pincel.clearRect(0, 0, 600, 400);
     }
+
+    setInterval(() => {
+        atualizaTela()
+    }, 20)
 </script>
