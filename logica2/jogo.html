@@ -4,7 +4,13 @@
     var pincel = tela.getContext("2d");
     var comprimento = parseInt(tela.width);
     var altura = parseInt(tela.height);
+    var raio = 10;
+    var xAleatorio;
+    var yAleatorio
     console.log(comprimento + "x" + altura);
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, comprimento, altura);
 
     function desenhaCirculo(x, y, raio, cor) {
         pincel.fillStyle = cor;
@@ -17,5 +23,33 @@
         pincel.clearRect(0, 0, comprimento, altura);
     }
 
+    function desenhaAlvo(x, y) {
+        desenhaCirculo(x, y, raio + 20, 'red');
+        desenhaCirculo(x, y, raio + 10, 'white');
+        desenhaCirculo(x, y, raio, 'red');
+    }
 
+    function sorteiaPosicao(maximo) {
+        return Math.floor(Math.random() * maximo);
+    }
+
+    function atualizaTela() {
+        limpaTela();
+        xAleatorio = sorteiaPosicao(comprimento);
+        yAleatorio = sorteiaPosicao(altura);
+        desenhaAlvo(xAleatorio, yAleatorio);
+    }
+
+    function dispara(e) {
+        var x = e.pageX - tela.offsetLeft;
+        var y = e.pageY - tela.offsetTop;
+        (x > xAleatorio - raio) &&
+        (x < xAleatorio + raio) &&
+        (y > yAleatorio - raio) &&
+        (y < yAleatorio + raio) ? alert("Acertou!") : ""
+
+    }
+
+    setInterval(atualizaTela, 1000);
+    tela.onclick = dispara;
 </script>
