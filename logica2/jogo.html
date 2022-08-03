@@ -1,0 +1,21 @@
+<canvas width="600" height="400"></canvas>
+<script>
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+    var comprimento = parseInt(tela.width);
+    var altura = parseInt(tela.height);
+    console.log(comprimento + "x" + altura);
+
+    function desenhaCirculo(x, y, raio, cor) {
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+        pincel.clearRect(0, 0, comprimento, altura);
+    }
+
+
+</script>
