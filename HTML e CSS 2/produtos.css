@@ -2,3 +2,8 @@ header {
     background: #bbbbbb;
     padding: 20px 0;
 }
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
