@@ -115,13 +115,25 @@ form label, form legend {
     text-shadow:0 1px 0 #528ecc;
     border: none;
     border-radius: 5px;
-    transition: 1s background;
+    transition: 1s all;
 }
 .enviar:hover {
     background-color: black;
+    transform: scale(1.2);
 }
 .enviar:active {
     position:relative;
     top:1px;
 }
-
+table {
+    margin: 40px 0 40px;
+}
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
