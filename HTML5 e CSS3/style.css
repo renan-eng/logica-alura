@@ -1,25 +1,30 @@
 html {
     font-family: "Gill Sans Nova", sans-serif;
 }
+
 header {
     background: #576072;
     padding: 20px 0;
 }
+
 .caixa {
     position: relative;
     width: 940px;
     margin: 0 auto;
 }
+
 nav {
     position: absolute;
     top: 110px;
     right: 0;
 }
+
 nav li {
     display: inline;
     margin: 0 0 0 15px;
 
 }
+
 nav a {
     text-transform: uppercase;
     color: #000000;
@@ -27,15 +32,18 @@ nav a {
     font-size: 22px;
     text-decoration: none;
 }
-nav a:hover{
+
+nav a:hover {
     color: #cd5047;
     text-decoration: underline;
 }
+
 .produtos {
     width: 940px;
     margin: 0 auto;
     padding: 50px 0;
 }
+
 .produtos li {
     display: inline-block;
     text-align: center;
@@ -47,32 +55,40 @@ nav a:hover{
     border: 2px solid black;
     border-radius: 10px;
 }
+
 .produtos li:hover {
     border: 2px solid #cd5047;
 }
+
 .produtos li:active {
-     border: 2px solid #61afef;
- }
+    border: 2px solid #61afef;
+}
+
 .produtos li:hover h2 {
     font-size: 34px;
 }
+
 .produtos h2 {
     font-size: 30px;
     font-weight: bold;
 }
+
 .produto-descricao {
     font-size: 18px;
 }
+
 .produto-preco {
     font-size: 22px;
     font-weight: bold;
     margin: 10px 0 0;
 }
+
 footer {
     text-align: center;
     background: url("bg.jpg");
     padding: 40px 0;
 }
+
 .copyright {
     color: white;
     font-size: 13px;
@@ -80,12 +96,13 @@ footer {
 }
 
 main {
-    width: 940px;
-    margin: 0 auto;
+
 }
+
 form {
     margin: 40px 0;
 }
+
 form label, form legend {
     display: block;
     font-size: 20px;
@@ -98,42 +115,131 @@ form label, form legend {
     padding: 10px 25px;
     width: 50%;
 }
+
 .checkbox {
     margin: 20px 0;
 }
 
 .enviar {
     width: 40%;
-    box-shadow:inset 0 1px 0 0 #bbdaf7;
-    background-color:#576072;
-    cursor:pointer;
-    color:#ffffff;
-    font-size:18px;
-    font-weight:bold;
-    padding:15px 0;
-    text-decoration:none;
-    text-shadow:0 1px 0 #528ecc;
+    box-shadow: inset 0 1px 0 0 #bbdaf7;
+    background-color: #576072;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 0;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #528ecc;
     border: none;
     border-radius: 5px;
     transition: 1s all;
 }
+
 .enviar:hover {
     background-color: black;
     transform: scale(1.2);
 }
+
 .enviar:active {
-    position:relative;
-    top:1px;
+    position: relative;
+    top: 1px;
 }
+
 table {
     margin: 40px 0 40px;
 }
+
 thead {
     background: #555555;
     color: white;
     font-weight: bold;
 }
-td, th{
+
+td, th {
     border: 1px solid black;
     padding: 8px 15px;
+}
+
+/*CSS da Página Inicial*/
+.banner {
+    width: 100%;
+}
+
+.tituloPrincipal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.principal {
+    padding: 3em 0;
+    background: #ffffff;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888) ;
+}
+.mapaConteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudoBeneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.listaBeneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.imgBeneficios {
+    width: 60%;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
 }

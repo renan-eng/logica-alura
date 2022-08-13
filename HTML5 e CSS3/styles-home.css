@@ -8,7 +8,7 @@ html {
     width: 100%;
 }
 
-.tituloCentralizado {
+.tituloPrincipal {
     text-align: center;
 }
 
@@ -42,6 +42,6 @@ ul {
     margin-right: 15%;;
 }
 
-.imgbeneficios {
+.imgBeneficios {
     width: 50%;
 }
