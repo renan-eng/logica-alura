@@ -173,6 +173,18 @@ td, th {
     clear: left;
 }
 
+/*.tituloPrincipal:first-letter {*/
+/*    font-weight: bold;*/
+/*}*/
+
+.tituloPrincipal:before {
+    content: "[ ";
+}
+.tituloPrincipal:after {
+    content: " ]";
+}
+
+
 .principal {
     padding: 3em 0;
     background: #ffffff;
@@ -200,12 +212,14 @@ td, th {
 
 .mapa {
     padding: 3em 0;
-    background: linear-gradient(#fefefe, #888888) ;
+    background: linear-gradient(#fefefe, #888888);
 }
+
 .mapaConteudo {
     width: 940px;
     margin: 0 auto;
 }
+
 .mapa p {
     margin: 0 0 2em;
     text-align: center;
@@ -229,6 +243,10 @@ td, th {
 
 .itens {
     line-height: 1.5;
+}
+
+.itens:before {
+    content: "★ ";
 }
 
 .itens:first-child {
