@@ -255,6 +255,7 @@ td, th {
 
 .imgBeneficios {
     width: 60%;
+    opacity: 0.8;
 }
 
 .video {
